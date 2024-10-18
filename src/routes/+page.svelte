@@ -1,59 +1,26 @@
 <script>
-	import Counter from './Counter.svelte';
-	import welcome from '$lib/images/svelte-welcome.webp';
-	import welcome_fallback from '$lib/images/svelte-welcome.png';
+	import Widget from "./Widget.svelte";
+	import {
+		generate1,
+		generate2,
+		generate3,
+		generate4,
+		generate5,
+		generate6,
+	} from "./generationFuncs.js";
 </script>
 
-<svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
-</svelte:head>
+<link rel="stylesheet" href="https://fonts.xz.style/serve/inter.css" />
+<link
+	rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/@exampledev/new.css@1.1.2/new.min.css"
+/>
 
-<section>
-	<h1>
-		<span class="welcome">
-			<picture>
-				<source srcset={welcome} type="image/webp" />
-				<img src={welcome_fallback} alt="Welcome" />
-			</picture>
-		</span>
-
-		to your new<br />SvelteKit app
-	</h1>
-
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
-
-	<Counter />
-</section>
-
-<style>
-	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 0.6;
-	}
-
-	h1 {
-		width: 100%;
-	}
-
-	.welcome {
-		display: block;
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
-	}
-</style>
+<table style="width: fit-content;">
+	<Widget generate={generate1}></Widget>
+	<Widget generate={generate2}></Widget>
+	<Widget generate={generate3}></Widget>
+	<Widget generate={generate4}></Widget>
+	<Widget generate={generate5}></Widget>
+	<Widget generate={generate6}></Widget>
+</table>
