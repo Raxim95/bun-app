@@ -18,7 +18,7 @@
 </script>
 
 <tr>
-	<td style="width: 300px; font-size:larger;">
+	<td style="width: 250px;">
 		{@html a.question}
 		{#if showAnswer}
 			{@html a.answer}
